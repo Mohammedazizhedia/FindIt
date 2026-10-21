@@ -8,22 +8,22 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
-> Task :app:mergeDebugResources
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
 > Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:processDebugManifestForPackage
-> Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugStartupProfile
 > Task :app:mergeDebugJniLibFolders
+> Task :app:compressDebugAssets
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
 > Task :app:mergeLibDexDebug
@@ -38,10 +38,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mergeExtDexDebug
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:107:21 Unresolved reference 'fillMaxSize'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/widget/FindItWidgets.kt:8:24 Unresolved reference 'button'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/widget/FindItWidgets.kt:37:28 Unresolved reference 'ButtonDefaults'.
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792620432079.json
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/widget/FindItWidgets.kt:37:43 @Composable invocations can only happen from the context of a @Composable function
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792621100589.json
 
 FAILURE: Build failed with an exception.
 
@@ -245,5 +243,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 41s
+BUILD FAILED in 38s
 29 actionable tasks: 29 executed
