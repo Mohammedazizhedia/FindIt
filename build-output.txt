@@ -14,37 +14,34 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:processDebugManifestForPackage
 > Task :app:desugarDebugFileDependencies
+> Task :app:compressDebugAssets
 > Task :app:mergeDebugStartupProfile
 > Task :app:mergeDebugJniLibFolders
-> Task :app:compressDebugAssets
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
 > Task :app:mergeLibDexDebug
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-> Task :app:writeDebugSigningConfigVersions
 > Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/MainActivity.kt:124:9 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/MainActivity.kt:124:21 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/MainActivity.kt:124:41 Unresolved reference 'updateAll'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:133:43 Cannot access 'constructor(canLoadSynchronously: Boolean): FontFamily': it is protected in 'androidx/compose/ui/text/font/FontFamily'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:134:41 Cannot access 'constructor(canLoadSynchronously: Boolean): FontFamily': it is protected in 'androidx/compose/ui/text/font/FontFamily'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:136:21 Cannot access 'constructor(canLoadSynchronously: Boolean): FontFamily': it is protected in 'androidx/compose/ui/text/font/FontFamily'.
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792608770938.json
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:133:54 Unresolved reference 'Font'.
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:134:52 Unresolved reference 'Font'.
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/theme/Theme.kt:136:32 Unresolved reference 'Font'.
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792610146155.json
 
 FAILURE: Build failed with an exception.
 
@@ -306,5 +303,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 37s
+BUILD FAILED in 30s
 29 actionable tasks: 29 executed
