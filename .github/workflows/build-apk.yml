@@ -33,9 +33,9 @@ jobs:
       - name: Install fonts
         run: |
           mkdir -p app/src/main/assets/fonts
-          curl -L -o app/src/main/assets/fonts/cairo.ttf https://github.com/google/fonts/raw/main/ofl/cairo/Cairo%5Bslnt%2Cwght%5D.ttf
-          curl -L -o app/src/main/assets/fonts/tajawal.ttf https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-Regular.ttf
-          curl -L -o app/src/main/assets/fonts/amiri.ttf https://github.com/google/fonts/raw/main/ofl/amiri/Amiri-Regular.ttf
+          for f in Regular Medium SemiBold Bold; do curl -L -o "app/src/main/assets/fonts/cairo_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/cairo/static/Cairo-$f.ttf"; done
+          for f in Regular Medium Bold; do curl -L -o "app/src/main/assets/fonts/tajawal_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-$f.ttf"; done
+          for f in Regular Bold; do curl -L -o "app/src/main/assets/fonts/amiri_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/amiri/Amiri-$f.ttf"; done
 
       - name: Build debug APK
         run: |
