@@ -32,10 +32,10 @@ jobs:
 
       - name: Install fonts
         run: |
-          mkdir -p app/src/main/assets/fonts
-          for f in Regular Medium SemiBold Bold; do curl -L -o "app/src/main/assets/fonts/cairo_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/cairo/static/Cairo-$f.ttf"; done
-          for f in Regular Medium Bold; do curl -L -o "app/src/main/assets/fonts/tajawal_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-$f.ttf"; done
-          for f in Regular Bold; do curl -L -o "app/src/main/assets/fonts/amiri_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/amiri/Amiri-$f.ttf"; done
+          mkdir -p app/src/main/res/font
+          for f in Regular Medium SemiBold Bold; do curl -L -o "app/src/main/res/font/cairo_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/cairo/static/Cairo-$f.ttf"; done
+          for f in Regular Medium Bold; do curl -L -o "app/src/main/res/font/tajawal_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-$f.ttf"; done
+          for f in Regular Bold; do curl -L -o "app/src/main/res/font/amiri_$(echo $f | tr 'A-Z' 'a-z').ttf" "https://github.com/google/fonts/raw/main/ofl/amiri/Amiri-$f.ttf"; done
 
       - name: Build debug APK
         run: |
