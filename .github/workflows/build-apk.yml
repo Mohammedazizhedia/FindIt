@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Unpack sources
-        run: unzip -o FindIt.zip -d .
+      - name: Unpack sources (repo files win)
+        run: |
+          unzip -o FindIt.zip -d /tmp/src
+          rsync -a --ignore-existing /tmp/src/ .
 
       - name: Setup JDK
         uses: actions/setup-java@v4
