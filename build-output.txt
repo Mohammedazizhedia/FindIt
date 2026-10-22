@@ -14,7 +14,6 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
@@ -22,15 +21,16 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 > Task :app:mergeDebugAssets
 > Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
+> Task :app:processDebugManifestForPackage
+> Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugStartupProfile
 > Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
-> Task :app:processDebugResources
-> Task :app:mergeDebugNativeLibs
 > Task :app:mergeLibDexDebug
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugNativeLibs
+> Task :app:processDebugResources
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libjnidispatch.so, libvosk.so.
@@ -38,24 +38,9 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mergeExtDexDebug
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/MainActivity.kt:138:40 Unresolved reference 'get'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/ai/AiScreen.kt:115:17 Unresolved reference 'refreshKeys'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/ai/AiScreen.kt:259:21 No parameter with name 'onAccountLogin' found.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/ai/AiScreen.kt:481:39 Unresolved reference 'startAccountLogin'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:47:35 Unresolved reference 'TextFieldDefaultsButton'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:149:9 Unresolved reference 'TextButton'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:153:13 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:153:18 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:211:21 Unresolved reference 'TextButton'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:212:25 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:212:30 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:223:21 Unresolved reference 'TextButton'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:224:25 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:224:30 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:398:17 Unresolved reference 'TextButton'.
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:407:21 @Composable invocations can only happen from the context of a @Composable function
-e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/home/HomeScreen.kt:407:26 @Composable invocations can only happen from the context of a @Composable function
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792677509304.json
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/ai/AiScreen.kt:190:13 No value passed for parameter 'onAccountLogin'.
+e: file:///home/runner/work/FindIt/FindIt/app/src/main/java/com/gallerysearch/app/ui/ai/AiScreen.kt:261:21 No parameter with name 'onAccountLogin' found.
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792679598136.json
 
 FAILURE: Build failed with an exception.
 
@@ -259,5 +244,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 28s
+BUILD FAILED in 33s
 29 actionable tasks: 29 executed
